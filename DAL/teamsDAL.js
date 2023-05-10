@@ -1,6 +1,7 @@
-const jsonfile = require('jsonfile')
-const usersDAL = require('./usersDAL');
-const eventsDAL = require('./eventsDAL');
+const jsonfile = require('jsonfile');
+const path = require('path');
+const usersDAL = require(path.join(__dirname, 'usersDAL'));
+const eventsDAL = require(path.join(__dirname, 'eventsDAL'));
 
 /*
 		"id":id,
@@ -83,18 +84,18 @@ async function getTeamByTeamId(teamId)
 
 async function testgetTeamByTeamId()
 {
-	let Team = await getTeamByTeamId(2)
+	let Team = await getTeamByTeamId(2);
 	console.log(Team);
 }
 //testgetTeamByTeamId()
 
 async function testgetTeamsById()
 {
-	let Team = await getTeamsById(2)
-	console.log(Team)
+	let Team = await getTeamByTeamId(2);
+	console.log(Team);
 	
 }
-//testgetTeamsById()
+testgetTeamsById();
 
 async function addTeam(name,memberName)
 {
