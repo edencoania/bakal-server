@@ -1,4 +1,4 @@
-const events = require('../DATA/events.json');
+const events = require('./DATA/events.json');
 const jsonfile = require('jsonfile');
 /*
 "event":[{
