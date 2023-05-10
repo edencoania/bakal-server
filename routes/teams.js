@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const entryBL = require('../BL/usersBL');
 const http = require('http');
-const { useDeferredValue } = require('react');
 const usersDAL = require('../DAL/usersDAL.JS');
 const teamsDAL = require('../DAL/teamsDAL');
 const utils = require('../BL/utils');
