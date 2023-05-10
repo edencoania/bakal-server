@@ -1,6 +1,6 @@
 const jsonfile = require('jsonfile')
-const usersDAL = require('./usersDAL.JS');
-const eventsDAL = require('./eventsDAL.JS');
+const usersDAL = require('./usersDAL');
+const eventsDAL = require('./eventsDAL');
 
 /*
 		"id":id,
