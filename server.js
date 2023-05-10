@@ -2,27 +2,26 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const app = express();
-const usersDAL = require('./DAL/usersDAL.JS');
-const teamsRouter = require('./routes/teams');
-const usersRouter = require('./routes/users');
-const eventsRouter = require('./routes/events');
+//const usersDAL = require('./DAL/usersDAL.JS');
+//const teamsRouter = require('./routes/teams');
+//const usersRouter = require('./routes/users');
+//const eventsRouter = require('./routes/events');
 const jwt = require('jsonwebtoken');
-const {google} = require('googleapis');
 const url = require('url');
 
-const loginRouter = require('./routes/login');
-const { getAllUsers } = require("./DAL/usersDAL.JS");
-const { getUserByID } = require("./DAL/usersDAL.JS");
+//const loginRouter = require('./routes/login');
+//const { getAllUsers } = require("./DAL/usersDAL.JS");
+//const { getUserByID } = require("./DAL/usersDAL.JS");
 
 const secrets = require('./key/secretKey');
 
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use('/login', loginRouter);
-app.use('/teams', teamsRouter);
-app.use('/users', usersRouter);
-app.use('/events', eventsRouter);
+//app.use('/login', loginRouter);
+//app.use('/teams', teamsRouter);
+//app.use('/users', usersRouter);
+//app.use('/events', eventsRouter);
 
 
 app.get("/message", (req, res) => {
@@ -44,7 +43,7 @@ app.get("/", (req, res) => {
 
 
 
-app.post("/signup/try", async (req, res) => {
+/*app.post("/signup/try", async (req, res) => {
 	let exist = await usersDAL.checkUserName(req.body.userName);
 	if(exist)
 	{res.status(409).json({ message: "username already exist" });}
@@ -59,7 +58,7 @@ else{
     res.status(200).send({message: "signup successful",user:user,token: token });
 	}
   });
-
+*/
   app.listen(8000, () => {
   console.log(`Server is running on port 8000.`);
 });
