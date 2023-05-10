@@ -1,5 +1,5 @@
-const events = require('./eventsDAL');
 const jsonfile = require('jsonfile');
+
 /*
 "event":[{
 		"id":12,
