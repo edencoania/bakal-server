@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const entryBL = require('../BL/usersBL');
+const entryBL = require('./../BL/usersBL');
 const http = require('http');
 const { useDeferredValue } = require('react');
-const usersDAL = require('../DAL/usersDAL.JS');
-const teamsDAL = require('../DAL/teamsDAL');
-const utils = require('../BL/utils');
-const secretKey = require('../key/secretKey');
+const usersDAL = require('./../DAL/usersDAL');
+const teamsDAL = require('./../DAL/teamsDAL');
+const utils = require('./../BL/utils');
+const secretKey = require('./../key/secretKey');
 const jwt = require('jsonwebtoken');
 
 //const myteams = require('../BL/myteams')

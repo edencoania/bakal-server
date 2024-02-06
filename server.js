@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const app = express();
-const usersDAL = require('./DAL/usersDAL.JS');
+const usersDAL = require('./DAL/usersDAL');
 const teamsRouter = require('./routes/teams');
 const usersRouter = require('./routes/users');
 const eventsRouter = require('./routes/events');
@@ -10,8 +10,8 @@ const jwt = require('jsonwebtoken');
 const url = require('url');
 
 const loginRouter = require('./routes/login');
-const { getAllUsers } = require("./DAL/usersDAL.JS");
-const { getUserByID } = require("./DAL/usersDAL.JS");
+const { getAllUsers } = require("./DAL/usersDAL");
+const { getUserByID } = require("./DAL/usersDAL");
 
 const secrets = require('./key/secretKey');
 

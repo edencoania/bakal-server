@@ -1,4 +1,4 @@
-const userDAL = require('../DAL/usersDAL.JS');
+const userDAL = require('../DAL/usersDAL');
 
 async function Login(userName,password)
 {
